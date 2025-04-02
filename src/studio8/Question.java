@@ -3,14 +3,19 @@ package studio8;
 import support.cse131.NotYetImplementedException;
 
 public class Question {
-	
+	private String prompt;
+	private String answer;
+	private int points;
 	/**
 	 * Constructor
 	 * @param prompt
 	 * @param answer
 	 * @param points
 	 */
-	public Question(String prompt, String answer, int points) {
+	public Question(String prompts, String answers, int point) {
+		prompt = prompts; 
+		answer = answers; 
+		points = point; 
 		throw new NotYetImplementedException();
 	}
 	
@@ -40,7 +45,8 @@ public class Question {
 	 * @return int points
 	 */
 	public int getPoints() {
-		throw new NotYetImplementedException();
+	//	throw new NotYetImplementedException();
+		return points;
 	}
 	
 	/**
@@ -48,10 +54,12 @@ public class Question {
 	 * @return String answer
 	 */
 	public String getAnswer() {
-		throw new NotYetImplementedException();
+		return answer;
+		//throw new NotYetImplementedException();
 	}
 	
 	public static void main(String[] args) {
+		Question q131 = new Question("Who will win the 2025 World Series?","The New York Yankees",131);
 		// TODO: Create a Question object of your own!
 	}
 }
